@@ -1,0 +1,298 @@
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 360px;
+  height: 100%;
+  font-family:'Courier New', Courier, monospace;
+  /* background-color: rgb(107, 104, 143); */
+  background-color: E6E6E6;
+  color: black;
+}
+
+.centered-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-div {
+  display:flex;
+  padding-top:8px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: CDE684;
+  box-shadow: 0px 2px 24px rgb(0, 0, 0, 0.4) ;
+  z-index: 1;
+}
+
+#form-title {
+  margin-left:-33px;
+  margin-right:-33px;
+  margin-top:-5%;
+}
+
+.title {
+  background-color: 00194C;
+  margin-top:px;
+  margin-bottom:4px;
+  padding-top: 8px;
+  padding-bottom:4px;
+  margin-bottom: 6px;
+  font-size: larger;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.inner-form-div{
+  display: flex;
+}
+
+.inner-div {
+  display: block;
+  padding:8px;
+  /* border: 1px solid black; */
+  border-radius: 4px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.4);
+  background-color: CDE684;
+  transition: transform 1s ease;
+}
+
+/* for the cards in the center */
+.text-io-div {
+  margin-top: 6px;
+  background-color: E6E6E6;
+  border:none;
+  border-radius: 4px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.currency-label {
+  font-size: small;
+  text-align: center;
+  display:block;
+}
+
+.currency-input {
+  text-align: center;
+  display:block;
+  background-color: E6E6E6;
+  border:none;
+  border-radius: 4px;
+  outline: none;
+  font-size: large;
+  width:130px;
+}
+
+.token-value {
+  font-size: smaller;
+  text-align: center;
+  color:grey;
+  max-width: 130px;
+}
+
+.token-img {
+  padding: 4px;
+  display:block;
+  width: 100%;
+  height: 100px;
+}
+
+.img-controller {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-img-div {
+  display:flex;
+  border-radius: 10px;
+  border: white 0.5px solid;
+  background-color: B5D946;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-img-div:hover {
+  background-color: A1D016;
+  cursor: pointer;
+}
+
+.img-tag{
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 4px;
+}
+
+/* for the exchange button in the center of the screen */
+#exchange-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+#exchange-btn-div-2 {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  border: black 1px solid;
+  justify-content: center;
+  align-items: center;
+}
+
+#exchange-btn-div-2:hover {
+  background-color: A1D016;
+  cursor: pointer;
+}
+
+
+/* for the swap button at the bottom of the screen*/
+#swap-button-div {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#swap-button {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px; 
+  background-color: B5D946; /* Background color for the button */
+  border-width: 1px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.swap-button:hover {
+  background-color: A1D016;
+}
+
+#screen-blocker {
+  display: none;
+  z-index: 4;
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.300);
+}
+
+#loading-indicator {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* for the movement of cards */
+.moveLeft {
+  transform: translateX(-250px); /* Move the divs 200px to the right */
+}
+
+.moveRight {
+  transform: translateX(250px); /* Move the divs 200px to the right */
+}
+
+
+/* for the token change menu */
+#menu {
+  display:none;
+  z-index: 2; 
+  background-color: #CDE684;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+#menu-title {
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px;  
+}
+
+#search-bar {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-input {
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+}
+
+#close-menu-div {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 7px; 
+  right: 7px; 
+  user-select: none;
+}
+
+#close-menu-button:hover{
+  background-color: A1D016;
+  cursor: pointer;
+}
+
+#close-menu-button{
+  text-align: center;  
+  border-radius: 10px;
+  background-color: E6E6E6;  
+}
+
+#menu-grid {
+  margin-top: 8px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.menuItem {
+  display: flex;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 2px;
+  background-color: #f0f0f0;
+  justify-content: center;
+  align-items: center;
+  width:100px;
+  user-select: none;
+}
+
+.menuItem:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.menu-curr-img {
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+}

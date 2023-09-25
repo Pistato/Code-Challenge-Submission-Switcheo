@@ -1,0 +1,92 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fancy Form</title>
+
+  <!-- You may add more stuff here -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
+<body>
+  <div class="centered-div">
+    <div class="form-div">
+        <form id = "token-form" onsubmit="return !1">
+          <div id = "form-title" class = "title">Swap</div>
+
+          <div class = "inner-form-div">
+            <!-- inputs -->
+            <div class = "inner-div" id="input-div">
+              <div id="input-img-card-div" class = "form-img-div" onclick="handleInputCurrencyChange()"> 
+                <div class="img-controller">
+                  <img id = "input-img" class="token-img" src="tokens/ETH.svg">
+                  <div id = "input-img-tag" class = "img-tag"> ETH </div>
+                </div>
+              </div>
+
+              <div class = "text-io-div">
+                <label for="input-amount" class = "currency-label">Send</label>
+                <input id="input-amount" inputmode="numeric" placeholder="Enter value" class = "currency-input" autocomplete="off"/>
+                <div id="input-value" class="token-value">-</div>
+              </div>
+
+            </div>
+            
+            <!-- exchange button -->
+            <div id="exchange-btn-div">
+              <div id="exchange-btn-div-2" onclick="handleExchangeClick()">
+                <img id="exchange-btn" height="32px" width="32px" src="swap.svg">
+              </div>
+              
+            </div>
+
+            <!-- outputs -->
+            <div class = "inner-div" id="output-div">
+              <div id="output-img-card-div" class = "form-img-div" onclick="handleOutputCurrencyChange()"> 
+                <div class="img-controller">
+                  <img id = "output-img" class="token-img" src="tokens/Select token.svg">
+                  <div id = "output-img-tag" class = "img-tag"> Select token </div>
+                  
+                </div>
+              </div>
+
+              <div class = "text-io-div">
+                <label for="output-amount" class = "currency-label">Receive</label>
+                <input id="output-amount" inputmode="numeric" placeholder="Enter value" class = "currency-input" autocomplete="off"/>
+                <div id="output-value" class="token-value">-</div>                
+              </div>
+
+            </div>
+          </div>
+          <div id = "swap-button-div">
+            <button id = "swap-button" onclick="submitForm()">CONFIRM SWAP</button>
+          </div>
+
+      </form>
+    </div>
+  </div>
+  
+  <div id="menu">
+    <div id="menu-title" class="title" cursor="grab">Menu</div>
+    <div id="close-menu-div">
+      <div id="close-menu-button" onclick="toggleMenu()">X</div>
+    </div>
+    
+    <div id="search-bar">
+      <input type="text" id="search-input" placeholder="Enter button ID">
+    </div>
+    <div id="menu-grid"></div>
+  </div>
+
+  <div id="screen-blocker">
+    <div id="loading-indicator">
+      Loading... 
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+
+</html>
